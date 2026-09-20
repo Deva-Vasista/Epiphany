@@ -33,14 +33,14 @@ Data (SQLite, uploads, checkpoints) persists in the `epiphany-data` volume. Stop
 
 #### Prerequisites
 
-- Conda env **`THEnv`** (backend)
+- Conda env **`<env name>`** or uv env (backend) 
 - Node.js 18+
 - An OpenAI-compatible API key (e.g. [OpenRouter](https://openrouter.ai) or [Groq](https://console.groq.com))
 
 #### Backend
 
 ```bash
-conda activate THEnv
+conda activate <env_name>
 cd backend
 pip install -r requirements.txt
 cp .env.example .env
