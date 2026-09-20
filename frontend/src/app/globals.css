@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --paper: #f3efe6;
+  --panel: #faf7f0;
+  --ink: #1c2b24;
+  --muted: #5c6b63;
+  --accent: #0f766e;
+  --accent-soft: rgba(15, 118, 110, 0.08);
+  --line: rgba(28, 43, 36, 0.14);
+  --background: var(--paper);
+  --foreground: var(--ink);
+}
+
+body {
+  color: var(--ink);
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(15, 118, 110, 0.12), transparent 55%),
+    linear-gradient(165deg, #e8f0ec 0%, var(--paper) 42%, #ebe4d6 100%);
+  font-family: "Source Sans 3", system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+.font-display {
+  font-family: Fraunces, Georgia, serif;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(to bottom, black, transparent 85%);
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.markdown-body {
+  font-size: 0.925rem;
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+.markdown-body p {
+  margin: 0.4em 0;
+}
+
+.markdown-body p:first-child {
+  margin-top: 0;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  margin: 0.4em 0;
+  padding-left: 1.25rem;
+}
+
+.markdown-body li {
+  margin: 0.15em 0;
+}
+
+.markdown-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.75em 0;
+  font-size: 0.85rem;
+  display: block;
+  overflow-x: auto;
+}
+
+.markdown-body th,
+.markdown-body td {
+  border: 1px solid var(--line);
+  padding: 0.4rem 0.65rem;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.markdown-body th {
+  background: var(--accent-soft);
+  font-weight: 600;
+}
+
+.markdown-body tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.markdown-body code {
+  font-size: 0.85em;
+  background: var(--accent-soft);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  overflow-x: auto;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--line);
+  padding: 0.75rem;
+  margin: 0.5em 0;
+  font-size: 0.8rem;
+}
+
+.markdown-body pre code {
+  background: transparent;
+  padding: 0;
+}
+
+@keyframes dash-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dash-card {
+  animation: dash-card-in 0.35s ease-out;
+}

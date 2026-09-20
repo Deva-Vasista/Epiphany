@@ -1,0 +1,22 @@
+# Python / data
+__pycache__/
+*.py[cod]
+.venv/
+.env
+backend/data/sessions/
+backend/data/app.db
+backend/data/checkpoints.db
+backend/data/*.db
+plan.md
+# Node
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.env.local
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
